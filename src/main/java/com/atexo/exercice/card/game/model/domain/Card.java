@@ -1,4 +1,4 @@
-package com.atexo.exercice.card.game.model;
+package com.atexo.exercice.card.game.model.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -15,13 +15,16 @@ public class Card implements Comparable<Card> {
 
     @Override
     public int compareTo(Card o) {
-        return Comparator.comparing((Card p) -> p.number.value)
-                .thenComparing(p -> p.sign.value)
+        return Comparator.comparing((Card p) -> p.sign.value)
+                .thenComparing(p -> p.number.value)
                 .compare(this, o);
     }
 
     @Override
     public String toString() {
-        return number.label+" "+sign.label;
+        return "Card{" +
+                "number=" + number +
+                ", sign=" + sign +
+                '}';
     }
 }

@@ -1,4 +1,4 @@
-package com.atexo.exercice.card.game.model;
+package com.atexo.exercice.card.game.model.domain;
 
 import java.util.stream.Stream;
 
@@ -27,6 +27,6 @@ public enum Number {
     };
 
     public static Number of(int value) {
-        return Stream.of(values()).filter(number -> number.value == value).findFirst().get();
+        return Stream.of(values()).filter(number -> number.value.equals(value)).findFirst().get();
     }
 }

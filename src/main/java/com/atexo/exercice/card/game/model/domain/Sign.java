@@ -1,4 +1,4 @@
-package com.atexo.exercice.card.game.model;
+package com.atexo.exercice.card.game.model.domain;
 
 import java.util.stream.Stream;
 
@@ -18,6 +18,6 @@ public enum Sign {
     };
 
     public static Sign of(int value) {
-        return Stream.of(values()).filter(sign -> sign.value == value).findFirst().get();
+        return Stream.of(values()).filter(sign -> sign.value.equals(value)).findFirst().get();
     }
 }
