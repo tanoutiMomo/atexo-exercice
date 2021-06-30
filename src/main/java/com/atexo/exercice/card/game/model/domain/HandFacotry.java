@@ -8,7 +8,7 @@ import java.util.stream.IntStream;
 public class HandFacotry {
     //since we have 13 Number the bounders go from 0 to 12
     final static Integer boundOfRandomNumber = 12;
-    //since we have 13 Number the bounders go from 0 to 3
+    //since we have 4 Sign the bounders go from 0 to 3
     final static Integer boundOfRandomSign = 3;
 
     public static List<Card> generateHandOfCard(Integer numberOfCard) {
